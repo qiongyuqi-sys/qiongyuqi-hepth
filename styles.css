@@ -147,22 +147,35 @@ body{
   text-align:center;
 }
 .action-btn {
-  text-decoration: none;     /* 去掉默认的下划线 */
-  display: inline-block;     /* 允许设置宽高和内边距 */
-  padding: 4px 12px;         /* 框内的上下左右留白 */
-  color: #111827;            /* 文字颜色（深灰/黑色） */
-  background-color: transparent; /* 背景透明，和外界一致 */
+  /* 让链接变成块级元素，这样才能设置宽高和边距 */
+  display: inline-block;
   
-  /* --- 最关键的一行：设置一个清晰的实线边框 --- */
-  border: 1px solid #9ca3af; /* 1像素粗的实线(solid)，颜色为灰色 */
+  /* 去掉默认的下划线或你之前设置的虚线 */
+  text-decoration: none;
+  border-bottom: none; 
   
-  border-radius: 6px;        /* 框的圆角 */
-  font-size: 0.9em;          /* 字体大小 */
-  transition: all 0.2s ease; /* 鼠标悬浮的动画效果 */
+  /* 设置内边距，让文字和边框之间有空隙 */
+  padding: 6px 12px;
+  
+  /* 设置文字颜色，这里用深灰色，你可以根据需要修改 */
+  color: #374151;
+  
+  /* 设置实线边框，1像素宽，颜色与文字相同 */
+  border: 1px solid #374151;
+  
+  /* 设置圆角，让边框看起来更柔和 */
+  border-radius: 6px;
+  
+  /* 添加一个简单的鼠标悬停过渡效果 */
+  transition: all 0.2s ease;
+  
+  /* 设置背景颜色为透明 */
+  background-color: transparent;
 }
 
-/* 鼠标放上去时的交互效果 */
+/* 鼠标悬停时的样式 */
 .action-btn:hover {
-  background-color: #f3f4f6; /* 鼠标放上去时，框内加一点浅灰色背景 */
-  border-color: #374151;     /* 边框颜色变深 */
+  /* 鼠标放上去时，背景变深色，文字变白色 */
+  background-color: #374151;
+  color: #ffffff;
 }
