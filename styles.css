@@ -146,20 +146,28 @@ body{
   padding: 14px 4px;
   text-align:center;
 }
+/* 默认状态 */
 .action-btn {
-  text-decoration: none;     /* 去掉下划线 */
-  display: inline-block;     /* 让链接可以设置宽高和内外边距 */
-  padding: 4px 12px;         /* 设置方块的大小：上下 4px，左右 12px */
-  background-color: #f3f4f6; /* 设置背景颜色（浅灰色） */
-  color: #374151;            /* 设置文字颜色（深灰色） */
-  border-radius: 6px;        /* 设置圆角大小，数值越大越圆 */
-  font-size: 0.9em;          /* 稍微调整一下字体大小 */
-  border: 1px solid #e5e7eb; /* 可选：加一点淡淡的边框 */
-  transition: all 0.2s ease; /* 让鼠标放上去时有平滑的过渡动画 */
+  display: inline-block;
+  text-decoration: none; /* 去掉下划线 */
+  padding: 4px 12px;     /* 内边距 */
+  border-radius: 6px;    /* 圆角 */
+  font-size: 0.9em;      /* 字体大小 */
+  transition: all 0.2s ease; /* 动画过渡 */
+
+  /* --- 核心修改部分 --- */
+  /* 1. 背景颜色设为透明，这样就和外界一致了 */
+  background-color: transparent;
+  /* 2. 文字设为白色。如果无效，尝试改成 color: #ffffff !important; */
+  color: #ffffff;
+  /* 3. 加上一个半透明的白色细边框，让你能看出是个方块 */
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* 鼠标悬浮在按钮上时的效果 */
+/* 鼠标悬浮时的效果（可选，建议加上，交互感更好） */
 .action-btn:hover {
-  background-color: #e5e7eb; /* 鼠标放上去时背景颜色稍微变深 */
-  text-decoration: none;     /* 确保悬浮时也不会出现下划线 */
+  /* 鼠标放上去时，背景变白，文字变黑 */
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
 }
