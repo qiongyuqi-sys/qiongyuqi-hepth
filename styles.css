@@ -146,28 +146,23 @@ body{
   padding: 14px 4px;
   text-align:center;
 }
-/* 默认状态 */
 .action-btn {
-  display: inline-block;
-  text-decoration: none; /* 去掉下划线 */
-  padding: 4px 12px;     /* 内边距 */
-  border-radius: 6px;    /* 圆角 */
-  font-size: 0.9em;      /* 字体大小 */
-  transition: all 0.2s ease; /* 动画过渡 */
-
-  /* --- 核心修改部分 --- */
-  /* 1. 背景颜色设为透明，这样就和外界一致了 */
-  background-color: transparent;
-  /* 2. 文字设为白色。如果无效，尝试改成 color: #ffffff !important; */
-  color: #ffffff;
-  /* 3. 加上一个半透明的白色细边框，让你能看出是个方块 */
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-decoration: none;     /* 去掉默认的下划线 */
+  display: inline-block;     /* 允许设置宽高和内边距 */
+  padding: 4px 12px;         /* 框内的上下左右留白 */
+  color: #111827;            /* 文字颜色（深灰/黑色） */
+  background-color: transparent; /* 背景透明，和外界一致 */
+  
+  /* --- 最关键的一行：设置一个清晰的实线边框 --- */
+  border: 1px solid #9ca3af; /* 1像素粗的实线(solid)，颜色为灰色 */
+  
+  border-radius: 6px;        /* 框的圆角 */
+  font-size: 0.9em;          /* 字体大小 */
+  transition: all 0.2s ease; /* 鼠标悬浮的动画效果 */
 }
 
-/* 鼠标悬浮时的效果（可选，建议加上，交互感更好） */
+/* 鼠标放上去时的交互效果 */
 .action-btn:hover {
-  /* 鼠标放上去时，背景变白，文字变黑 */
-  background-color: #ffffff;
-  color: #000000;
-  border-color: #ffffff;
+  background-color: #f3f4f6; /* 鼠标放上去时，框内加一点浅灰色背景 */
+  border-color: #374151;     /* 边框颜色变深 */
 }
