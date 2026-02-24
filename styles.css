@@ -179,3 +179,8 @@ body{
   background-color: #374151;
   color: #ffffff;
 }
+.justify-text {
+  text-align: justify;
+  hyphens: auto; /* 允许浏览器在合适的地方使用连字符换行 */
+  -webkit-hyphens: auto; /* 兼容 Safari */
+}
