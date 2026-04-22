@@ -184,3 +184,9 @@ body{
   hyphens: auto; /* 允许浏览器在合适的地方使用连字符换行 */
   -webkit-hyphens: auto; /* 兼容 Safari */
 }
+.pub-note {
+  margin-left: 12px;        /* 关键：给左边留出 12px 的空隙，将它和 PDF 按钮隔开 */
+  color: #000000;           /* 建议用稍微浅一点的灰色文字，作为补充说明 */
+  font-size: 0.9em;         /* 字体大小和按钮保持一致 */
+  vertical-align: middle;   /* 让文字和旁边的按钮在垂直方向上居中对齐 */
+}
