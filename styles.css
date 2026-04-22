@@ -187,7 +187,11 @@ body{
 .pub-note {
   margin-left: 12px;        /* 关键：给左边留出 12px 的空隙，将它和 PDF 按钮隔开 */
   color: #000000;           /* 建议用稍微浅一点的灰色文字，作为补充说明 */
-  font-size: 0.9em;         /* 确保字体大小和按钮 (.action-btn) 保持一致 */
+  font-size: 1.15em;         /* 确保字体大小和按钮 (.action-btn) 保持一致 */
   font-style: italic;       /* 【新增】将文字设置为斜体 */
-  vertical-align: middle;   /* 垂直居中对齐 */
+}
+.pub-actions {
+  display: flex;       /* 开启弹性盒子布局 */
+  align-items: center; /* 核心魔法：让里面的所有按钮和文字在垂直方向上绝对居中！ */
+  flex-wrap: wrap;     /* 防止手机屏幕变窄时元素挤在一起，允许它们自动换行 */
 }
