@@ -147,51 +147,44 @@ body{
   text-align:center;
 }
 .action-btn {
-  /* 让链接变成块级元素，这样才能设置宽高和边距 */
   display: inline-block;
-  
-  /* 去掉默认的下划线或你之前设置的虚线 */
   text-decoration: none;
   border-bottom: none; 
-  
-  /* 设置内边距，让文字和边框之间有空隙 */
   padding: 6px 12px;
   
-  /* 设置文字颜色，这里用深灰色，你可以根据需要修改 */
-  color: #374151;
+  /* 【修改这里】：使用你的全局文字变量，白天深色，晚上浅色 */
+  color: var(--text);
+  border: 1px solid var(--text);
   
-  /* 设置实线边框，1像素宽，颜色与文字相同 */
-  border: 1px solid #374151;
-  
-  /* 设置圆角，让边框看起来更柔和 */
   border-radius: 6px;
-  
-  /* 添加一个简单的鼠标悬停过渡效果 */
   transition: all 0.2s ease;
-  
-  /* 设置背景颜色为透明 */
   background-color: transparent;
 }
 
-/* 鼠标悬停时的样式 */
 .action-btn:hover {
-  /* 鼠标放上去时，背景变深色，文字变白色 */
-  background-color: #374151;
-  color: #ffffff;
+  /* 【修改这里】：鼠标悬浮时产生反色效果 */
+  background-color: var(--text); /* 背景变成文字颜色 */
+  color: var(--bg);              /* 文字变成背景颜色 */
 }
+
 .justify-text {
   text-align: justify;
-  hyphens: auto; /* 允许浏览器在合适的地方使用连字符换行 */
-  -webkit-hyphens: auto; /* 兼容 Safari */
+  hyphens: auto; 
+  -webkit-hyphens: auto; 
 }
+
 .pub-note {
-  margin-left: 12px;        /* 关键：给左边留出 12px 的空隙，将它和 PDF 按钮隔开 */
-  color: #000000;           /* 建议用稍微浅一点的灰色文字，作为补充说明 */
-  font-size: 1.15em;         /* 确保字体大小和按钮 (.action-btn) 保持一致 */
-  font-style: italic;       /* 【新增】将文字设置为斜体 */
+  margin-left: 12px;        
+  
+  /* 【修改这里】：使用全局文字变量，完美融入日夜模式 */
+  color: var(--text);            
+  
+  font-size: 1.15em;         
+  font-style: italic;       
 }
+
 .pub-actions {
-  display: flex;       /* 开启弹性盒子布局 */
-  align-items: center; /* 核心魔法：让里面的所有按钮和文字在垂直方向上绝对居中！ */
-  flex-wrap: wrap;     /* 防止手机屏幕变窄时元素挤在一起，允许它们自动换行 */
+  display: flex;       
+  align-items: center; 
+  flex-wrap: wrap;     
 }
